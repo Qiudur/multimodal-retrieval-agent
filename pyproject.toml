@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multimodal-retrieval-agent"
+version = "0.1.0"
+description = "A multimodal image retrieval agent with intent routing, CLIP retrieval, and Qwen-VL fine-grained labeling experiments."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Project Author"}
+]
+dependencies = [
+  "numpy>=1.24",
+  "Pillow>=10.0",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+models = [
+  "torch>=2.1",
+  "transformers>=4.45",
+  "accelerate>=0.30",
+  "peft>=0.11",
+  "qwen-vl-utils[decord]>=0.0.8",
+  "modelscope>=1.15",
+]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.5",
+  "nbstripout>=0.7",
+]
+
+[project.scripts]
+mmra = "multimodal_retrieval_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"

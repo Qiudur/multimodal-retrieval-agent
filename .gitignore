@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+.env
+.env.*
+.DS_Store
+__MACOSX/
+
+# Data and model artifacts
+data/images/
+data/raw/
+data/processed/
+models/
+outputs/
+checkpoints/
+runs/
+wandb/
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+
+# Notebook checkpoints
+.ipynb_checkpoints/

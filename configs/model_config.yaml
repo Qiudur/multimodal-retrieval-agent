@@ -1,0 +1,19 @@
+clip:
+  text_encoder: IDEA-CCNL/Taiyi-CLIP-Roberta-large-326M-Chinese
+  image_encoder: openai/clip-vit-large-patch14
+
+intent:
+  llm_candidates:
+    - Qwen/Qwen2.5-1.5B-Instruct
+    - Qwen/Qwen2.5-3B-Instruct
+    - Qwen/Qwen2.5-7B-Instruct
+  vlm_candidates:
+    - Qwen/Qwen2.5-VL-3B-Instruct
+    - Qwen/Qwen2.5-VL-7B-Instruct
+
+fine_tuning:
+  method: lora
+  target_modules:
+    llm: [q_proj, k_proj, v_proj, o_proj]
+    mlp: [gate_proj, up_proj, down_proj]
+    vision: [qkv, proj]

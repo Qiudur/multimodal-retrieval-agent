@@ -1,0 +1,6 @@
+torch>=2.1
+transformers>=4.45
+accelerate>=0.30
+peft>=0.11
+qwen-vl-utils[decord]>=0.0.8
+modelscope>=1.15

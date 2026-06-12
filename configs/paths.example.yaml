@@ -1,0 +1,11 @@
+data_root: data
+image_root: data/images
+metadata_path: data/metadata/image_dataset.json
+intent_dataset_path: data/metadata/gpt_intent.json
+qwen_labels_path: data/metadata/qwen_labels.json
+qwen_lora_labels_path: data/metadata/qwen_lora_labels.json
+
+# Optional local model paths. Leave empty to download from Hugging Face/ModelScope.
+qwen_model_path: ""
+qwen_vl_model_path: ""
+qwen_lora_adapter_path: ""
